@@ -1,12 +1,7 @@
 var getRepos = require('./../js/getRepos.js').getRepos;
 
-var populateRepoList = function(userRepos) {
-  var response = '';
-  userRepos.repos.forEach(function(repo) {
-
-    response += '<li><div class="collapsible-header">' + repo.name + '</div><div class="collapsible-body"><p>Description: ' + repo.description + '</p></div></li>';
-  });
-  return reponse;
+var populateRepoList = function(miniRepo) {
+  $('#repo_list').append('<li><div class="collapsible-header">' + miniRepo.name + '</div><div class="collapsible-body"><p>Description: ' + miniRepo.description + '</p></div></li>');
 };
 
 $(document).ready(function(){
@@ -16,7 +11,6 @@ $(document).ready(function(){
     // prevent default http request from form
     event.preventDefault();
     var userName = $('#userNameInput').val();
-    var userRepos = getRepos(userName);
-    console.log(userRepos);
+    var userRepos = getRepos(userName, populateRepoList);
   });
 });
