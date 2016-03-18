@@ -14,17 +14,7 @@ var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
 var browserSync = require('browser-sync').create();
     // override is required for bootstrap to work correctly
-var lib = require('bower-files')({
-  "overrides":{
-    "bootstrap" : {
-      "main": [
-        "less/bootstrap.less",
-        "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
-      ]
-    }
-  }
-});
+var lib = require('bower-files')();
 
 // Set build env from command line
 // Required to control whether the final build is minified
