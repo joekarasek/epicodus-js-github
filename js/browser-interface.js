@@ -1,8 +1,9 @@
 var getRepos = require('./../js/getRepos.js').getRepos;
+var populateRepoList = require('./../js/displayFunctions.js').displayListItem;
 
-var populateRepoList = function(miniRepo) {
-  $('#repo_list').append('<li><div class="collapsible-header">' + miniRepo.name + '</div><div class="collapsible-body"><p>Description: ' + miniRepo.description + '</p></div></li>');
-};
+// var populateRepoList = function(miniRepo) {
+//   $('#repo_list').append('<li><div class="collapsible-header">' + miniRepo.name + '</div><div class="collapsible-body"><p>Description: ' + miniRepo.description + '</p></div></li>');
+// };
 
 $(document).ready(function(){
 
@@ -12,7 +13,7 @@ $(document).ready(function(){
     event.preventDefault();
     // Clear last results
     $('#repo_list').empty();
-    // Populate repo list
+    // Populate repo list with user name from input form and the displayListItem function from UI.js
     getRepos($('#userNameInput').val(), populateRepoList);
   });
 });
