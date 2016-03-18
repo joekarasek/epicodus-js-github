@@ -10,7 +10,9 @@ $(document).ready(function(){
   $('#userName').submit(function(event) {
     // prevent default http request from form
     event.preventDefault();
-    var userName = $('#userNameInput').val();
-    var userRepos = getRepos(userName, populateRepoList);
+    // Clear last results
+    $('#repo_list').empty();
+    // Populate repo list
+    getRepos($('#userNameInput').val(), populateRepoList);
   });
 });
