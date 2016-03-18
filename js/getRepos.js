@@ -9,7 +9,7 @@ exports.getRepos = function(userName){
     repos: []
   };
   // Ajax request to get all repo information for userName
-  $.get('https://api.github.com/users/' + userName + '/repos?access_token=' + apiKey).then(function(response){
+  $.get('https://api.github.com/users/' + userName + '/repos?access_token=' + apiKey + '&sort=created&per_page=100').then(function(response){
     //Sort through response to take out unneeded information, pushes repo object to userReponseObject array of repos
     response.forEach(function(repo) {
       var miniRepo = {
@@ -18,8 +18,8 @@ exports.getRepos = function(userName){
       };
       userReponseObject.repos.push(miniRepo);
     });
-    console.log(userReponseObject);
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
+  return userReponseObject;
 };
