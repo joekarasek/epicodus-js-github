@@ -10,3 +10,13 @@ exports.getRepos = function(userName, callback) {
     console.log(error.responseJSON.message);
   });
 };
+
+exports.getUser = function(userName, callback) {
+  // Ajax request to get all repo information for userName
+  $.get('https://api.github.com/users/' + userName + '?access_token=' + apiKey)
+  .then(function(response){
+    callback(response);
+  }).fail(function(error){
+    console.log(error.responseJSON.message);
+  });
+};
