@@ -1,0 +1,15 @@
+.user-wrapper {
+  margin-top: 10px;
+  img {
+    width: 100%;
+    border-radius: 5%;
+    border: black 3px solid;
+  }
+  .user-header {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  .user-info {
+    text-align: center;
+  }
+}
