@@ -2,13 +2,13 @@
 // Takes an array of github repos
 exports.listRepos = function(response) {
   $('#repo_list').empty();
+  console.log(response);
   response.forEach(function(repo) {
-    $('#repo_list').append('<li><div class="collapsible-header">' + repo.name + '</div><div class="collapsible-body"><p>Description: ' + repo.description + '</p></div></li>');
+    $('#repo_list').append('<li><div class="collapsible-header"><div class="left">' + repo.name + '</div><div class="right">' + repo.created_at + '</div></div><div class="collapsible-body"><p>Description: ' + repo.description + '</p></div></li>');
   });
 };
 
 exports.showUserInfo = function(response) {
-  console.log(response);
   $('.user-wrapper').empty();
   $('.user-wrapper')
     .append('<img class="z-depth-2" src=' + response.avatar_url + ' alt="gitHub gravitar user"/>')
