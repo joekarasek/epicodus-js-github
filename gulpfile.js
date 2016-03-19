@@ -76,7 +76,7 @@ gulp.task('cssBuild', function() {
 });
 
 // will run JS and CSS for bower (front-end dependencies)
-gulp.task('bowerBuild', ['bowerJS', 'bowerCSS']);
+gulp.task('bowerBuild', ['bowerJS', 'bowerCSS', 'fonts']);
 
 // front end dependencies js
 gulp.task('bowerJS', function () {
@@ -92,6 +92,13 @@ gulp.task('bowerCSS', function () {
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('./build/css'));
 });
+
+// font build (works with materialize)
+gulp.task('fonts', function() {
+  return gulp.src(['./bower_components/Materialize/font/*'])
+  .pipe(gulp.dest('./build/font/'));
+});
+
 
 // Takes concatenated JS and browserify's it
 gulp.task('jsBrowserify' , ['concat', 'jshint'] , function() {
