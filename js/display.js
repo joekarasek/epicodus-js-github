@@ -5,7 +5,7 @@ exports.listRepos = function(response) {
   $('#repo_list').empty();
   console.log(response);
   response.forEach(function(repo) {
-    $('#repo_list').append('<li><div class="collapsible-header"><div class="left">Name: ' + repo.name + '</div><div class="right">Created: ' + moment(repo.created_at).fromNow() + '</div></div><div class="collapsible-body"><p>Description: ' + repo.description + '</p><p>Link</p></div></li>');
+    $('#repo_list').append('<li><div class="collapsible-header"><div class="left">Name: ' + repo.name + '</div><div class="right">Created ' + moment(repo.created_at).fromNow() + '</div></div><div class="collapsible-body"><p class="left">Description: ' + repo.description + '</p><p><a href=' + repo.svn_url + '>Link</a></p></div></li>');
   });
 };
 
