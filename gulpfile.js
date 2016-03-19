@@ -95,7 +95,7 @@ gulp.task('bowerCSS', function () {
 
 // font build (works with materialize)
 gulp.task('fonts', function() {
-  return gulp.src(['./bower_components/Materialize/font/*'])
+  return gulp.src(['./bower_components/Materialize/font/*/*.*'])
   .pipe(gulp.dest('./build/font/'));
 });
 
