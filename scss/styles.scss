@@ -1,4 +1,10 @@
+$darkest: #172815;
+$medium: #6B8C51;
+$light: #B3DA7D;
+$lightest: #E1FCBA;
+
 .user-wrapper {
+  background-color: $light;
   margin-top: 10px;
   padding: 10px;
   img {
@@ -14,4 +20,22 @@
     text-align: center;
     width: 100%;
   }
+}
+
+nav {
+  background-color: $darkest;
+}
+
+// only ul is the list of repos, should probably change to its own class repo-wrapper?
+ul {
+  li>.collapsible-header {
+    background-color: $medium;
+  }
+  li>.collapsible-body {
+    background-color: $light;
+  }
+}
+
+body {
+  background-color: $lightest;
 }

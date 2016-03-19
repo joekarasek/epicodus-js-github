@@ -5,6 +5,9 @@ var showUserInfo = require('./../js/display.js').showUserInfo;
 
 $(document).ready(function() {
 
+  // Hide user-wrapper at load
+  $('.user-wrapper').hide();
+
   // On submit of userName populate repo list
   $('#userName').submit(function(event) {
     event.preventDefault();
@@ -15,6 +18,7 @@ $(document).ready(function() {
   $('#userName').submit(function(event) {
     event.preventDefault();
     getUser($('#userNameInput').val(), showUserInfo );
+    $('.user-wrapper').show();
   });
 
 });
