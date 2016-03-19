@@ -8,6 +8,7 @@ $(document).ready(function() {
   // On submit of userName populate repo list
   $('#userName').submit(function(event) {
     event.preventDefault();
+    console.log(moment().format());
     getRepos($('#userNameInput').val(), listRepos );
   });
 

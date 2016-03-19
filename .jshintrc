@@ -89,6 +89,7 @@
     // Custom Globals
     "globals"       : {
       "$" : false,
-      "require" : false
+      "require" : false,
+      "moment": false
       }        // additional predefined global variables
 }

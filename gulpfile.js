@@ -111,8 +111,8 @@ gulp.task('concat', function() {
 // linter
 gulp.task('jshint', function(){
   return gulp.src(['js/*.js'])
-    .pipe(jshint())
-    // .pipe(jshint('.jshintrc'))
+    // .pipe(jshint())
+    .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail'));
 });
