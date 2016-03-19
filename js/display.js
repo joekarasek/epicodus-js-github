@@ -14,4 +14,5 @@ exports.showUserInfo = function(response) {
     .append('<img class="z-depth-2" src=' + response.avatar_url + ' alt="gitHub gravitar user"/>')
     .append('<p class="user-header">User ID:</p><p class="user-info">' + response.login + '</p>');
   if (response.email) $('.user-wrapper').append('<p class="user-header">User Email:</p><p class="user-info">' + response.email + '</p>');
+  $('.user-wrapper').addClass('card');
 };
