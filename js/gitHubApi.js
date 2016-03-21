@@ -3,7 +3,7 @@ var apiKey = require('./../.env').apiKeyGithub;
 // Take a user name (string) and passes it to callback (function)
 exports.getRepos = function(userName, callback) {
   // Ajax request to get all repo information for userName
-  $.get('https://api.github.com/users/' + userName + '/repos?access_token=' + apiKey + '&sort=created&per_page=100')
+  $.get('https://api.github.com/users/' + userName + '/repos' + apiKey + '&sort=created&per_page=100')
   .then(function(response){
     callback(response);
   }).fail(function(error){
@@ -13,7 +13,7 @@ exports.getRepos = function(userName, callback) {
 
 exports.getUser = function(userName, callback) {
   // Ajax request to get all repo information for userName
-  $.get('https://api.github.com/users/' + userName + '?access_token=' + apiKey)
+  $.get('https://api.github.com/users/' + userName + apiKey)
   .then(function(response){
     callback(response);
   }).fail(function(error){
