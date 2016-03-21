@@ -118,6 +118,7 @@ gulp.task('concat', function() {
 // linter
 gulp.task('jshint', function(){
   return gulp.src(['js/*.js'])
+    // If no .jshintrc file is present, use this line instead for default settins
     // .pipe(jshint())
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))

@@ -1,19 +1,27 @@
-# _Project Title_
+# _GitHub Search_
 
-#### _A simple template, 3.__.2016_
+#### _Code Review Week 1 of Epicodus Javascript, 3.19.2016_
 
-### By _**Joseph Karasek and **_
+### By _**Joseph Karasek**_
 
 ## Description
 
-_This web app is designed to ._
+_This web app is designed to take a GitHub user name and display information about that user including the 100 most recent public repositories they have on GitHub._
 
-_The goal of this project is to ._
+_The goal of this project is to show competency with node.js, gulp, dependency management, and Javascript. To pass the code review the code must use all of the build tools that have been introduced:_
 
-_The project was put together using ._
+* _Manage frontend dependencies with Bower._
+* _Manage all our other dependencies with npm._
+* _Write an asset pipeline with a live reloading development server in gulp._
 
+_Gulp tasks for:_
 
-## Setup/Installation
+* _Concatenation, minification, and running the browserify package on your JavaScript._
+* _Building and cleaning._
+* _Running the development server with live reloading._
+* _Running JSHint._
+* _Compiling SASS._
+* _Automatically including Bower dependencies as vendor.js and vendor.css._
 
 #### System Requirements
 
@@ -35,14 +43,7 @@ _The project was put together using ._
 
 ## Known Bugs
 
-_This application is not fully designed and may have unknown bugs._
-
-_The current gulpfile.js does not handle creation of a production version of the build (with minified js). Front-end dependencies will still be minified._
-
-## To Do (coming in future versions)
-
-1. [ ] No crash at errors during watch. Will log errors but not attempt a rebuild.
-2. [ ] Folder for organizing html files, gulp will build fresh html in the build folder.
+_The site only returns the 100 most recent github repos. Needs pagation._
 
 ## Support and contact details
 
