@@ -30,6 +30,8 @@ _Gulp tasks for:_
 
 #### Installation
 
+* You will need an access token from GitHub for the GitHub API to work. You can get a free public access token through settings>personal access tokens on GitHub. Place the access_token in the .env file in the root directory.
+
 * After cloning the repo, you will need to install dependencies...
 
 
