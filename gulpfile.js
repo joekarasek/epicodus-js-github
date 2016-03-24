@@ -20,6 +20,13 @@ var lib = require('bower-files')();
 // Required to control whether the final build is minified
 var buildProduction = utilities.env.production;
 
+var config = {
+  dir: {
+    js: './js/*.js',
+    scss: './scss/*.scss'
+  }
+};
+
 // ==================================
 // **********************************
 //               Tasks
@@ -37,9 +44,9 @@ gulp.task('serve', ['buildStart'], function(){
       index: "index.html"
     }
   });
-  gulp.watch('./js/*.js', ['jsBrowserify', 'reload']);
+  gulp.watch(config.dir.js, ['jsBrowserify', 'reload']);
   gulp.watch('./*.html', ['reload']);
-  gulp.watch('./scss/*.scss', ['cssBuild', 'reload']);
+  gulp.watch(config.dir.scss, ['cssBuild', 'reload']);
   gulp.start('removeTmp');
 });
 
@@ -68,7 +75,7 @@ gulp.task('buildAll', ['cssBuild', 'bowerBuild', 'jsBrowserify']);
 
 // compile sass/scss, builds css files
 gulp.task('cssBuild', function() {
-  return gulp.src('scss/*.scss')
+  return gulp.src(config.dir.scss)
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
