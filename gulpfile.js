@@ -128,6 +128,6 @@ gulp.task('jshint', function(){
     // If no .jshintrc file is present, use this line instead for default settins
     // .pipe(jshint())
     .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail'));
+    .pipe(jshint.reporter('default'));
+    // .pipe(jshint.reporter('fail'));
 });
