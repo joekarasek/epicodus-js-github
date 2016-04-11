@@ -1,4 +1,4 @@
-# _GitHub Search_
+# _[GitHub Search](http://joekarasek.github.io/epicodus-js-github/_
 
 #### _Code Review Week 1 of Epicodus Javascript, 3.19.2016_
 
@@ -8,7 +8,7 @@
 
 _This web app is designed to take a GitHub user name and display information about that user including the 100 most recent public repositories they have on GitHub._
 
-_The goal of this project is to show competency with node.js, gulp, dependency management, and Javascript. To pass the code review the code must use all of the build tools that have been introduced:_
+_The goal of this project is to show competency with node.js, gulp, dependency management, and Javascript, and API's. To pass the code review the code must use all of the build tools that have been introduced:_
 
 * _Manage frontend dependencies with Bower._
 * _Manage all our other dependencies with npm._
@@ -27,6 +27,7 @@ _Gulp tasks for:_
 
 1. [Node.js](https://nodejs.org/en/) w/ [npm](https://www.npmjs.com/)
 2. [Bower](http://bower.io/)
+3. [Gulp](http://gulpjs.com/)
 
 #### Installation
 
